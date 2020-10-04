@@ -4,9 +4,12 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start":"electron .",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hrishikesh P",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.3"
+  }
 }
