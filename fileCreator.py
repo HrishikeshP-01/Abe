@@ -20,6 +20,7 @@ def moveFilesToDir():
     os.mkdir('Abe Bot')
     shutil.move('Abe-bot.py',"Abe bot")
     shutil.move('.env',"Abe bot")
+    shutil.move('Botresponses',"Abe bot")
 
 makePyFile('Abe-bot.py')
 moveFilesToDir()
