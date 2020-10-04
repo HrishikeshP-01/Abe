@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abe</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Additional Responses</h1>
+        <p>Here you can add responses of the bot to certain user messages<br>
+        Example: Is this compulsory --> No it's not </p>
+        <div class="form-group">
+            <label for="UQ">User Query</label>
+            <input type ="text" name="UQ" value="" id="UQ"
+                placeholder="UQ" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="BR">Bot Response</label>
+            <input type="BR" name="BR" value="" id="BR"
+                placeholder="BR" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <button id="add-to-list">Add response</button>
+        </div>
+        <div id="response-list">
+            <table>
+                <tr>
+                    <th>S. No.</th>
+                    <th>User Query</th>
+                    <th>Bot Response</th>
+                </tr>
+            </table>
+        </div>
+        <script src="view.js"></script>
+    </div>
+</body>
+</html>
