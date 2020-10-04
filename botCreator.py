@@ -15,10 +15,10 @@ def addImportOptions(f):
 def addDict(f):
     x=[
         "kry={}\n",
-        "f=open('Botresponse','r')\n",
+        "f=open('Botresponses','r')\n",
         "for x in f:\n",
         "\ty=x.split(':::')\n",
-        "\tkry[y[0]]=y[1]\n"
+        "\tkry[y[0].lower()]=y[1]\n"
     ]
     f.writelines(x)
 
@@ -81,8 +81,8 @@ def addMessageReaction(f,message_dict):
         'async def on_message(message):\n',
         '\tif message.author==client.user:\n',
         '\t\treturn\n',
-        '\tif message.content in '+message_dict+'.keys():\n',
-        '\t\tresponse='+message_dict+'[message.content]\n',
+        '\tif message.content.lower() in '+message_dict+'.keys():\n',
+        '\t\tresponse='+message_dict+'[message.content.lower()]\n',
         '\t\tawait message.channel.send(response)\n',
         '\telif message.content==\'raise-exception\':\n',
         '\t\traise discord.DiscordException\n'
