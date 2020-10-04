@@ -75,15 +75,15 @@
     <label for="SDD">SDD</label>
     <script>
         function DatasetFunc(BLM,SDD){
-            if(BLM.checked){
-                alert('BLM added');
-            }
-            if(SDD.checked){
-                alert('SDD added');
+            if(BLM.checked || SDD.checked){
+                var popup=document.getElementById("myPopup");
+                popup.classList.toggle("show");
             }
         }
     </script>
-    <a href=""><button onclick="DatasetFunc(BLM,SDD)">Proceed</button></a>
-    <span class="popuptext" id="myPopup">Done</span>
+    <button onclick="DatasetFunc(BLM,SDD)">Proceed</button>
+    <div class="popup">
+    <span class="popuptext" id="myPopup">Dataset Added</span>
+    </div>
 </body>
 </html>
