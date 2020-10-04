@@ -13,7 +13,6 @@ def makePyFile(x):
     botCreator.addListOfMembers(f)
     botCreator.addMemberWelcome(f,"Welcome to the guild!")
     botCreator.addMessageReaction(f,'kry')
-    botCreator.addMessageReaction2(f)
     botCreator.addExceptionHandling(f)
     botCreator.addClientRun(f)
 

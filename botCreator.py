@@ -85,23 +85,14 @@ def addMessageReaction(f,message_dict):
         '\t\tresponse='+message_dict+'[message.content.lower()]\n',
         '\t\tawait message.channel.send(response)\n',
         '\telif message.content==\'raise-exception\':\n',
-        '\t\traise discord.DiscordException\n'
-    ]
-    f.writelines(x)
-
-def addMessageReaction2(f):
-    x=[
-        '\n@client.event\n',
-        'async def on_message2(message):\n',
-        '\tif message.author==client.user:\n',
-        '\t\treturn\n',
+        '\t\traise discord.DiscordException\n',
         "\ty=open('scraped-hate-speech-data','r')\n",
         '\tfor d in y:\n',
+        '\t\td=d[0:len(d)-1]\n',
         "\t\tif d in message.content.lower():\n"
         "\t\t\tresponse='That kind of behaviour will not be tolerated\\nBetter control yourself or get out'\n"
         "\t\t\tawait message.channel.send(response)\n"
-        "\t\telif messege.content=='raise-exception':\n"
-        "\t\t\traise discord.DiscordException\n"
+        "\t\t\treturn\n"
     ]
     f.writelines(x)
 
