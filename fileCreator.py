@@ -13,11 +13,13 @@ def makePyFile(x):
     botCreator.addListOfMembers(f)
     botCreator.addMemberWelcome(f,"Welcome to the guild!")
     botCreator.addMessageReaction(f,'kry')
+    botCreator.addMessageReaction2(f)
     botCreator.addExceptionHandling(f)
     botCreator.addClientRun(f)
 
 def moveFilesToDir():
     os.mkdir('Abe Bot')
+    shutil.copyfile('scraped-hate-speech-data','Abe bot/scraped-hate-speech-data')
     shutil.move('Abe-bot.py',"Abe bot")
     shutil.move('.env',"Abe bot")
     shutil.move('Botresponses',"Abe bot")
