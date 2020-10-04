@@ -47,8 +47,8 @@
         /* Toggle this class - hide and show the popup */
         .popup .show {
           visibility: visible;
-          -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+          -webkit-animation: fadeIn 0s;
+          animation: fadeIn 0s;
         }
         
         /* Add animation (fade in the popup) */
@@ -79,8 +79,11 @@
                 var popup=document.getElementById("myPopup");
                 popup.classList.toggle("show");
             }
+            setTimeout(3000);
+            window.location.href="index.html";
         }
     </script>
+    <br>
     <button onclick="DatasetFunc(BLM,SDD)">Proceed</button>
     <div class="popup">
     <span class="popuptext" id="myPopup">Dataset Added</span>
