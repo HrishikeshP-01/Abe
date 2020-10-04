@@ -10,4 +10,5 @@ $('#make-env').on('click',()=>{
     entry="DISCORD_TOKEN = "+DT+"\nDISCORD_GUILD = "+DG+"\n";
 
     fs.appendFileSync('.env',entry)
+    window.location.href="Finish.html";
 })
