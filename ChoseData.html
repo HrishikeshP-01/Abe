@@ -12,7 +12,19 @@
     Sexism Down Dataset (SDD) - Collection of sexist slurs no one deserves to hear<br>
     <input type="checkbox" id="BLM" name="BLM" value="BLM">
     <label for="BLM">BLM Dataset</label>
+    <br>
     <input type="checkbox" id="SDD" name="SDD" value="SDD">
     <label for="SDD">SDD</label>
+    <script>
+        function DatasetFunc(BLM,SDD){
+            if(BLM.checked){
+                alert('BLM added');
+            }
+            if(SDD.checked){
+                alert('SDD added');
+            }
+        }
+    </script>
+    <a href=""><button onclick="DatasetFunc(BLM,SDD)">Proceed</button></a>
 </body>
 </html>
